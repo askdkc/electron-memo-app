@@ -1,0 +1,2 @@
+# Electronのメモアプリ
+Electronで作ったサンプルメモアプリ

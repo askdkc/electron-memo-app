@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Memo App</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+    
+    .container {
+      display: flex;
+      height: calc(100vh - 40px);
+    }
+    
+    .memo-list {
+      width: 30%;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-right: 20px;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    
+    .memo-editor {
+      flex-grow: 1;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      overflow: hidden;
+    }
+    
+    .memo-item {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    
+    .memo-item:hover {
+      background-color: #f9f9f9;
+    }
+    
+    .memo-item.selected {
+      background-color: #e6f7ff;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    textarea {
+      flex-grow: 1;
+      resize: none;
+      overflow-y: auto;
+      min-height: 100px;
+    }
+    
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      flex-shrink: 0;
+    }
+    
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #1890ff;
+      color: white;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #40a9ff;
+    }
+    
+    button.delete {
+      background-color: #ff4d4f;
+    }
+    
+    button.delete:hover {
+      background-color: #ff7875;
+    }
+    
+    h1 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>メモアプリ</h1>
+
+  <div class="container">
+    <div class="memo-list">
+      <button id="new-memo" style="width: 100%; margin-bottom: 10px;">新規メモ</button>
+      <div id="memo-items"></div>
+    </div>
+    
+    <div class="memo-editor">
+      <input type="hidden" id="memo-id">
+      <input type="text" id="memo-title" placeholder="タイトル">
+      <textarea id="memo-content" placeholder="ここに何か書きます..."></textarea>
+      <div class="button-group">
+        <button id="save-memo">保存</button>
+        <button id="delete-memo" class="delete">削除</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
