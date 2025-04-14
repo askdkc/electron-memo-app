@@ -1,6 +1,9 @@
 # Electronのメモアプリ
 Electronで作ったサンプルメモアプリ
 
+<img width="480" alt="image" src="https://github.com/user-attachments/assets/577eb08a-d468-4049-bfb8-1de34052740e" />
+
+
 ## 使い方
 
 ```bash
