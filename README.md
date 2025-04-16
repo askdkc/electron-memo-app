@@ -1,5 +1,5 @@
 # Electronのメモアプリ
-Electronで作ったサンプルメモアプリ
+Electronで作ったサンプルメモアプリ(データはSQLiteで永続化される)
 
 <img width="480" alt="image" src="https://github.com/user-attachments/assets/577eb08a-d468-4049-bfb8-1de34052740e" />
 
