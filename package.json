@@ -10,7 +10,7 @@
     "package-linux": "electron-packager . --overwrite --asar=false --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
   },
   "dependencies": {
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
     "electron": "^35.7.5",
